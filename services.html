@@ -4,175 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Mestizo de Sangley FBO</title>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- FIXED NAVBAR WITH YOUR LOGO -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="logo-img">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link active">Services</a></li>
-                <li><a href="inquiry.html" class="nav-link">Inquiry</a></li>
-                <li><a href="inquiry.html" class="nav-cta">Get Quote</a></li>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Mestizo de Sangley FBO">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="inquiry.html" class="nav-btn">Get Quote</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="services-hero">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
         <div class="container">
-            <div class="hero-content">
-                <span class="section-badge">ELITE FBO SERVICES</span>
-                <h1>Comprehensive Aviation Solutions</h1>
-                <p>Sangley Point's premier FBO - CAAP certified, 24/7 operations</p>
-            </div>
+            <div class="section-label white">OUR SERVICES</div>
+            <h1>Aviation Services<br>Built for the Philippines</h1>
+            <p>CAAP certified · 24/7 operations · Sangley Point, Cavite</p>
         </div>
     </section>
 
-    <!-- PERFECTLY READABLE SERVICE CARDS -->
-    <section class="services-section">
+    <!-- SERVICES DETAILED -->
+    <section class="section-white">
         <div class="container">
-            <div class="services-grid">
-                <!-- FUEL CARD - PERFECT READABILITY -->
-                <div class="service-card" data-service="fuel">
-                    <div class="card-icon">
+            <div class="services-list">
+
+                <!-- FUEL -->
+                <div class="service-row">
+                    <div class="service-row-icon">
                         <i class="fas fa-gas-pump"></i>
                     </div>
-                    <div class="card-content">
+                    <div class="service-row-content">
                         <h3>Fuel Services</h3>
-                        <ul>
-                            <li>Jet A-1 Into-Plane & Bulk</li>
-                            <li>AVGAS 100LL Available</li>
-                            <li>PH Competitive Pricing</li>
-                            <li>Quick Turnaround</li>
-                            <li>Fuel Quality Guarantee</li>
-                        </ul>
-                        <div class="card-footer">
-                            <span class="price">From ₱45/L</span>
-                            <a href="inquiry.html" class="btn-small">Inquire</a>
+                        <p>We provide Jet A-1 and AVGAS 100LL with competitive Philippine pricing. Our fuel team ensures fast, safe, and certified fueling operations for all aircraft types.</p>
+                        <div class="service-tags">
+                            <span>Jet A-1</span>
+                            <span>AVGAS 100LL</span>
+                            <span>Into-Plane</span>
+                            <span>Bulk Fuel</span>
+                            <span>Quality Certified</span>
                         </div>
                     </div>
+                    <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- HANDLING CARD -->
-                <div class="service-card" data-service="handling">
-                    <div class="card-icon">
+                <!-- HANDLING -->
+                <div class="service-row">
+                    <div class="service-row-icon">
                         <i class="fas fa-plane"></i>
                     </div>
-                    <div class="card-content">
+                    <div class="service-row-content">
                         <h3>Aircraft Handling</h3>
-                        <ul>
-                            <li>Secure Ramp Parking</li>
-                            <li>Hangar Space Available</li>
-                            <li>GPU & Towing Services</li>
-                            <li>Priority Positioning</li>
-                            <li>Marshalling Available</li>
-                        </ul>
-                        <div class="card-footer">
-                            <span class="price">Starting ₱5,000</span>
-                            <a href="inquiry.html" class="btn-small">Inquire</a>
+                        <p>Secure ramp parking, hangar space, GPU, towing, and marshalling services. We handle all aircraft types with precision and care at Sangley Point.</p>
+                        <div class="service-tags">
+                            <span>Ramp Parking</span>
+                            <span>Hangar Space</span>
+                            <span>GPU Available</span>
+                            <span>Towing</span>
+                            <span>Marshalling</span>
                         </div>
                     </div>
+                    <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- VIP CARD -->
-                <div class="service-card" data-service="vip">
-                    <div class="card-icon">
+                <!-- VIP -->
+                <div class="service-row">
+                    <div class="service-row-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                    <div class="card-content">
+                    <div class="service-row-content">
                         <h3>VIP Concierge</h3>
-                        <ul>
-                            <li>24/7 Meet & Greet</li>
-                            <li>Fast-Track Immigration</li>
-                            <li>Luxury Ground Transport</li>
-                            <li>Manila Hotel Bookings</li>
-                            <li>Dedicated Coordinator</li>
-                        </ul>
-                        <div class="card-footer">
-                            <span class="price">Custom Quote</span>
-                            <a href="inquiry.html" class="btn-small">Inquire</a>
+                        <p>24/7 meet & greet, fast-track customs and immigration, luxury ground transport, and hotel bookings across Metro Manila and Cavite.</p>
+                        <div class="service-tags">
+                            <span>Meet & Greet</span>
+                            <span>Immigration</span>
+                            <span>Customs</span>
+                            <span>Hotel Booking</span>
+                            <span>Luxury Transport</span>
                         </div>
                     </div>
+                    <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- GROUND CARD -->
-                <div class="service-card" data-service="ground">
-                    <div class="card-icon">
+                <!-- GROUND -->
+                <div class="service-row">
+                    <div class="service-row-icon">
                         <i class="fas fa-car-side"></i>
                     </div>
-                    <div class="card-content">
+                    <div class="service-row-content">
                         <h3>Ground Services</h3>
-                        <ul>
-                            <li>Crew Cars Available</li>
-                            <li>VIP Transfers Manila</li>
-                            <li>Catering Coordination</li>
-                            <li>Local Tours Available</li>
-                            <li>Laundry Services</li>
-                        </ul>
-                        <div class="card-footer">
-                            <span class="price">From ₱2,500</span>
-                            <a href="inquiry.html" class="btn-small">Inquire</a>
+                        <p>Crew cars, VIP transfers to Manila, catering coordination, local tours, and laundry services. Everything your crew needs on the ground.</p>
+                        <div class="service-tags">
+                            <span>Crew Cars</span>
+                            <span>VIP Transfers</span>
+                            <span>Catering</span>
+                            <span>Local Tours</span>
+                            <span>Laundry</span>
                         </div>
                     </div>
+                    <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- MAINTENANCE CARD -->
-                <div class="service-card" data-service="maintenance">
-                    <div class="card-icon">
+                <!-- MAINTENANCE -->
+                <div class="service-row">
+                    <div class="service-row-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <div class="card-content">
+                    <div class="service-row-content">
                         <h3>Maintenance</h3>
-                        <ul>
-                            <li>AOG Support 24/7</li>
-                            <li>Line Maintenance</li>
-                            <li>CAAP Certified Techs</li>
-                            <li>Parts Procurement PH</li>
-                            <li>Pre-Flight Inspections</li>
-                        </ul>
-                        <div class="card-footer">
-                            <span class="price">Hourly Rates</span>
-                            <a href="inquiry.html" class="btn-small">Inquire</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Experience Elite Service?</h2>
-            <a href="inquiry.html" class="btn-primary large">Get Your Quote Now</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="footer-logo">
-                <div class="footer-info">
-                    <p><i class="fas fa-phone"></i> +63 917 123 4567</p>
-                    <p><i class="fas fa-envelope"></i> fbo@mestizodesangley.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Sangley Point, Cavite, Philippines</p>
-                </div>
-            </div>
-            <div class="footer-bottom">© 2024 Mestizo de Sangley FBO</div>
-        </div>
-    </footer>
-</body>
-</html>
+                        <p>CAAP-certified technicians available for AOG support, line maintenance, pre-flight inspections, and parts procurement across the Philippines.</p>
+                        <div class="service-tags">
+                            <span
