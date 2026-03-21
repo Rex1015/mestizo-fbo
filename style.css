@@ -1091,3 +1091,187 @@ a {
         font-size: 2rem;
     }
 }
+/* ================================
+   HERO - LEFT/RIGHT LAYOUT
+================================ */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    color: var(--white);
+}
+
+.hero-left {
+    flex: 1;
+    max-width: 580px;
+}
+
+.hero-left .hero-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.hero-left h1 {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+
+.hero-left .hero-sub {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    max-width: 480px;
+}
+
+.hero-right {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-logo {
+    width: 320px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.4));
+    animation: heroLogoFloat 4s ease-in-out infinite;
+}
+
+@keyframes heroLogoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+/* ================================
+   PAGE HERO - LEFT/RIGHT LAYOUT
+================================ */
+.page-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.page-hero-left {
+    flex: 1;
+    max-width: 580px;
+}
+
+.page-hero-left h1 {
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    color: var(--white);
+}
+
+.page-hero-left p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    max-width: 480px;
+}
+
+.page-hero-right {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero-logo {
+    width: 280px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.35))
+            brightness(0) invert(1);
+    opacity: 0.9;
+    animation: heroLogoFloat 4s ease-in-out infinite;
+}
+
+/* ================================
+   RESPONSIVE - HERO LAYOUT
+================================ */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding-top: 6rem;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-left .hero-sub {
+        max-width: 100%;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-right {
+        order: -1;
+    }
+
+    .hero-logo {
+        width: 200px;
+    }
+
+    .page-hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .page-hero-left {
+        max-width: 100%;
+    }
+
+    .page-hero-left p {
+        max-width: 100%;
+    }
+
+    .page-hero-right {
+        order: -1;
+    }
+
+    .page-hero-logo {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo {
+        width: 160px;
+    }
+
+    .page-hero-logo {
+        width: 140px;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5rem;
+    }
+}
+
