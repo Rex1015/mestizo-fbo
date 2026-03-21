@@ -4,151 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Mestizo de Sangley FBO</title>
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Navbar (same as index.html) -->
+    <!-- FIXED NAVBAR WITH YOUR LOGO -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" id="logo-img">
-                <span>Mestizo de Sangley FBO</span>
+                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
-                <li><a href="services.html" class="nav-link active"><span>Services</span></a></li>
-                <li><a href="inquiry.html" class="nav-link"><span>Inquiry</span></a></li>
-                <li><a href="inquiry.html" class="nav-cta"><i class="fas fa-paper-plane"></i> Get Quote</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="inquiry.html" class="nav-link">Inquiry</a></li>
+                <li><a href="inquiry.html" class="nav-cta">Get Quote</a></li>
             </ul>
-            <div class="hamburger"><span></span><span></span><span></span></div>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Services Hero -->
+    <!-- Hero -->
     <section class="services-hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">ELITE FBO SERVICES</div>
+                <span class="section-badge">ELITE FBO SERVICES</span>
                 <h1>Comprehensive Aviation Solutions</h1>
-                <p>Philippines' premier FBO services at Sangley Point - tailored for local & international operations</p>
-                <div class="hero-stats">
-                    <div class="stat"><i class="fas fa-award"></i> CAAP Certified</div>
-                    <div class="stat"><i class="fas fa-clock"></i> 24/7 Operations</div>
-                    <div class="stat"><i class="fas fa-shield-alt"></i> Fully Insured</div>
-                </div>
+                <p>Sangley Point's premier FBO - CAAP certified, 24/7 operations</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="services-grid-section">
+    <!-- PERFECTLY READABLE SERVICE CARDS -->
+    <section class="services-section">
         <div class="container">
             <div class="services-grid">
-                <!-- Fuel Services -->
-                <div class="service-card premium" data-category="fuel">
-                    <div class="card-header">
-                        <div class="service-icon fuel"><i class="fas fa-gas-pump"></i></div>
+                <!-- FUEL CARD - PERFECT READABILITY -->
+                <div class="service-card" data-service="fuel">
+                    <div class="card-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <div class="card-content">
                         <h3>Fuel Services</h3>
-                    </div>
-                    <div class="card-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> Jet A-1 (Into-Plane & Bulk)</li>
-                            <li><i class="fas fa-check"></i> AVGAS 100LL Available</li>
-                            <li><i class="fas fa-check"></i> PH Competitive Pricing</li>
-                            <li><i class="fas fa-check"></i> Quick Turnaround</li>
-                            <li><i class="fas fa-check"></i> Fuel Quality Guarantee</li>
+                            <li>Jet A-1 Into-Plane & Bulk</li>
+                            <li>AVGAS 100LL Available</li>
+                            <li>PH Competitive Pricing</li>
+                            <li>Quick Turnaround</li>
+                            <li>Fuel Quality Guarantee</li>
                         </ul>
                         <div class="card-footer">
-                            <span class="price-tag">From ₱45/L</span>
-                            <button class="btn-inquire">Inquire Now</button>
+                            <span class="price">From ₱45/L</span>
+                            <a href="inquiry.html" class="btn-small">Inquire</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Aircraft Handling -->
-                <div class="service-card premium" data-category="handling">
-                    <div class="card-header">
-                        <div class="service-icon handling"><i class="fas fa-plane"></i></div>
+                <!-- HANDLING CARD -->
+                <div class="service-card" data-service="handling">
+                    <div class="card-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="card-content">
                         <h3>Aircraft Handling</h3>
-                    </div>
-                    <div class="card-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> Secure Ramp Parking</li>
-                            <li><i class="fas fa-check"></i> Hangar Space Available</li>
-                            <li><i class="fas fa-check"></i> GPU & Towing</li>
-                            <li><i class="fas fa-check"></i> Priority Positioning</li>
-                            <li><i class="fas fa-check"></i> Marshalling Services</li>
+                            <li>Secure Ramp Parking</li>
+                            <li>Hangar Space Available</li>
+                            <li>GPU & Towing Services</li>
+                            <li>Priority Positioning</li>
+                            <li>Marshalling Available</li>
                         </ul>
                         <div class="card-footer">
-                            <span class="price-tag">Starting ₱5,000</span>
-                            <button class="btn-inquire">Inquire Now</button>
+                            <span class="price">Starting ₱5,000</span>
+                            <a href="inquiry.html" class="btn-small">Inquire</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- VIP Concierge -->
-                <div class="service-card premium" data-category="vip">
-                    <div class="card-header">
-                        <div class="service-icon vip"><i class="fas fa-user-tie"></i></div>
+                <!-- VIP CARD -->
+                <div class="service-card" data-service="vip">
+                    <div class="card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="card-content">
                         <h3>VIP Concierge</h3>
-                    </div>
-                    <div class="card-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> 24/7 Meet & Greet</li>
-                            <li><i class="fas fa-check"></i> Fast-Track Immigration</li>
-                            <li><i class="fas fa-check"></i> Luxury Ground Transport</li>
-                            <li><i class="fas fa-check"></i> Manila Hotel Bookings</li>
-                            <li><i class="fas fa-check"></i> Dedicated Coordinator</li>
+                            <li>24/7 Meet & Greet</li>
+                            <li>Fast-Track Immigration</li>
+                            <li>Luxury Ground Transport</li>
+                            <li>Manila Hotel Bookings</li>
+                            <li>Dedicated Coordinator</li>
                         </ul>
                         <div class="card-footer">
-                            <span class="price-tag">Custom Quote</span>
-                            <button class="btn-inquire">Inquire Now</button>
+                            <span class="price">Custom Quote</span>
+                            <a href="inquiry.html" class="btn-small">Inquire</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Ground Services -->
-                <div class="service-card premium" data-category="ground">
-                    <div class="card-header">
-                        <div class="service-icon ground"><i class="fas fa-car"></i></div>
+                <!-- GROUND CARD -->
+                <div class="service-card" data-service="ground">
+                    <div class="card-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="card-content">
                         <h3>Ground Services</h3>
-                    </div>
-                    <div class="card-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> Crew Cars Available</li>
-                            <li><i class="fas fa-check"></i> VIP Transfers</li>
-                            <li><i class="fas fa-check"></i> Catering Coordination</li>
-                            <li><i class="fas fa-check"></i> Local Tours</li>
-                            <li><i class="fas fa-check"></i> Laundry Services</li>
+                            <li>Crew Cars Available</li>
+                            <li>VIP Transfers Manila</li>
+                            <li>Catering Coordination</li>
+                            <li>Local Tours Available</li>
+                            <li>Laundry Services</li>
                         </ul>
                         <div class="card-footer">
-                            <span class="price-tag">From ₱2,500</span>
-                            <button class="btn-inquire">Inquire Now</button>
+                            <span class="price">From ₱2,500</span>
+                            <a href="inquiry.html" class="btn-small">Inquire</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Maintenance -->
-                <div class="service-card premium" data-category="maintenance">
-                    <div class="card-header">
-                        <div class="service-icon maintenance"><i class="fas fa-tools"></i></div>
-                        <h3>Maintenance</h3>
+                <!-- MAINTENANCE CARD -->
+                <div class="service-card" data-service="maintenance">
+                    <div class="card-icon">
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <div class="card-body">
+                    <div class="card-content">
+                        <h3>Maintenance</h3>
                         <ul>
-                            <li><i class="fas fa-check"></i> AOG Support</li>
-                            <li><i class="fas fa-check"></i> Line Maintenance</li>
-                            <li><i class="fas fa-check"></i> CAAP Certified Techs</li>
-                            <li><i class="fas fa-check"></i> Parts Procurement</li>
-                            <li><i class="fas fa-check"></i> Pre-Flight Inspections</li>
+                            <li>AOG Support 24/7</li>
+                            <li>Line Maintenance</li>
+                            <li>CAAP Certified Techs</li>
+                            <li>Parts Procurement PH</li>
+                            <li>Pre-Flight Inspections</li>
                         </ul>
                         <div class="card-footer">
-                            <span class="price-tag">Hourly Rates</span>
-                            <button class="btn-inquire">Inquire Now</button>
+                            <span class="price">Hourly Rates</span>
+                            <a href="inquiry.html" class="btn-small">Inquire</a>
                         </div>
                     </div>
                 </div>
@@ -156,33 +152,26 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready for Elite Service?</h2>
-                <p>Get your personalized quote within 30 minutes</p>
-                <a href="inquiry.html" class="btn-primary large">Start Inquiry <i class="fas fa-arrow-right"></i></a>
-            </div>
+            <h2>Ready to Experience Elite Service?</h2>
+            <a href="inquiry.html" class="btn-primary large">Get Your Quote Now</a>
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.png" alt="Mestizo de Sangley FBO">
-                </div>
-                <div class="footer-contact">
+                                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="footer-logo">
+                <div class="footer-info">
                     <p><i class="fas fa-phone"></i> +63 917 123 4567</p>
                     <p><i class="fas fa-envelope"></i> fbo@mestizodesangley.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Sangley Point, Cavite, Philippines</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mestizo de Sangley FBO. All rights reserved.</p>
-            </div>
+            <div class="footer-bottom">© 2024 Mestizo de Sangley FBO</div>
         </div>
     </footer>
 </body>
