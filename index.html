@@ -3,146 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mestizo de Sangley FBO - Premier Philippine Aviation</title>
+    <title>Mestizo de Sangley FBO</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor2"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" id="logo-img">
-                <span>Mestizo de Sangley FBO</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active"><span>Home</span></a></li>
-                <li><a href="services.html" class="nav-link"><span>Services</span></a></li>
-                <li><a href="inquiry.html" class="nav-link"><span>Inquiry</span></a></li>
-                <li><a href="inquiry.html" class="nav-cta"><i class="fas fa-paper-plane"></i> Get Quote</a></li>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Mestizo de Sangley FBO">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="inquiry.html" class="nav-btn">Get Quote</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span><span></span><span></span>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-bg">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="assets/hero-bg.mp4" type="video/mp4">
-            </video>
-            <div class="hero-overlay"></div>
-        </div>
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">PREMIER FBO • PHILIPPINES</div>
-            <h1 class="hero-title">
-                <span class="title-line">Mestizo de</span>
-                <span class="title-line">Sangley FBO</span>
-            </h1>
-            <p class="hero-subtitle">Sangley Point's Elite Fixed Base Operator<br>24/7 VIP Aviation Services</p>
-            <div class="hero-stats">
-                <div class="stat"><span>5000+</span> Aircraft</div>
-                <div class="stat"><span>24/7</span> Service</div>
-                <div class="stat"><span>100%</span> Satisfaction</div>
-            </div>
-            <div class="hero-buttons">
-                <a href="inquiry.html" class="btn-primary">Get Instant Quote</a>
-                <a href="#services" class="btn-secondary">Our Services</a>
+            <p class="hero-tag">SANGLEY POINT · CAVITE · PHILIPPINES</p>
+            <h1>Mestizo de<br>Sangley FBO</h1>
+            <p class="hero-sub">Premier Fixed Base Operator — 24/7 Elite Aviation Services</p>
+            <div class="hero-btns">
+                <a href="inquiry.html" class="btn-green">Get a Quote</a>
+                <a href="services.html" class="btn-outline">Our Services</a>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="hero-scroll">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <section id="services" class="services-preview">
+    <!-- STATS -->
+    <section class="stats-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">CORE SERVICES</span>
-                <h2>Elite Aviation Solutions</h2>
-                <p>Comprehensive FBO services tailored for Philippine operations</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon"><i class="fas fa-gas-pump"></i></div>
-                    <h3>Fuel Services</h3>
-                    <p>Jet A-1 & AVGAS with PH competitive pricing</p>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <h3>5,000+</h3>
+                    <p>Aircraft Handled</p>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon"><i class="fas fa-plane"></i></div>
-                    <h3>Ramp & Hangar</h3>
-                    <p>Secure parking for all aircraft types</p>
+                <div class="stat-box">
+                    <h3>24/7</h3>
+                    <p>Operations</p>
                 </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-                    <h3>VIP Concierge</h3>
-                    <p>24/7 handling & Manila arrangements</p>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>CAAP Certified</p>
                 </div>
-            </div>
-            <div class="cta-center">
-                <a href="services.html" class="btn-primary">Explore All Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-item" data-aos="fade-right">
-                    <div class="feature-number">01</div>
-                    <h3>Strategic Location</h3>
-                    <p>Sangley Point - Manila's closest international gateway</p>
-                </div>
-                <div class="feature-item" data-aos="fade-up">
-                    <div class="feature-number">02</div>
-                    <h3>CAAP Certified</h3>
-                    <p>Fully compliant with Philippine aviation standards</p>
-                </div>
-                <div class="feature-item" data-aos="fade-left">
-                    <div class="feature-number">03</div>
-                    <h3>Local Expertise</h3>
-                    <p>Philippine-focused operations & partnerships</p>
+                <div class="stat-box">
+                    <h3>15+</h3>
+                    <p>Years Experience</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
+    <!-- SERVICES PREVIEW -->
+    <section class="section-white">
+        <div class="container">
+            <div class="section-label">WHAT WE OFFER</div>
+            <h2 class="section-title">Elite Aviation Services</h2>
+            <p class="section-sub">Comprehensive FBO solutions built for Philippine operations</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon green">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <h4>Fuel Services</h4>
+                    <p>Jet A-1 & AVGAS 100LL with competitive Philippine pricing and fast turnaround.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon green">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h4>Ramp & Hangar</h4>
+                    <p>Secure parking and hangar space for all aircraft types at Sangley Point.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon green">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>VIP Concierge</h4>
+                    <p>24/7 meet & greet, fast-track immigration, and luxury ground transport.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon green">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>Maintenance</h4>
+                    <p>CAAP-certified technicians for AOG support, line maintenance, and inspections.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon green">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h4>Ground Transport</h4>
+                    <p>Crew cars, VIP transfers to Manila, hotel bookings, and local arrangements.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon green">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Round-the-clock FBO coordinators ready to handle any request instantly.</p>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="services.html" class="btn-green">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-label">WHY CHOOSE US</div>
+            <h2 class="section-title">The Mestizo Difference</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <span class="why-num">01</span>
+                    <div>
+                        <h4>Strategic Location</h4>
+                        <p>Sangley Point — Manila's closest international aviation gateway with direct access to Metro Manila.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-num">02</span>
+                    <div>
+                        <h4>CAAP Certified</h4>
+                        <p>Fully compliant with Civil Aviation Authority of the Philippines standards and regulations.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-num">03</span>
+                    <div>
+                        <h4>Local Expertise</h4>
+                        <p>Deep knowledge of Philippine aviation operations, customs, and immigration procedures.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <span class="why-num">04</span>
+                    <div>
+                        <h4>Elite Network</h4>
+                        <p>Established partnerships with top hotels, transport providers, and service companies in the Philippines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
         <div class="container">
             <h2>Ready to Fly with Us?</h2>
-            <p>Get your personalized quote in 30 minutes</p>
-            <a href="inquiry.html" class="btn-primary large">Start Inquiry</a>
+            <p>Get your personalized FBO quote in under 30 minutes.</p>
+            <a href="inquiry.html" class="btn-white">Start Your Inquiry</a>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.png" alt="Mestizo de Sangley FBO">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="footer-logo">
+                    <p>Premier Fixed Base Operator at Sangley Point, Cavite, Philippines.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Navigation</h5>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="inquiry.html">Inquiry</a>
                 </div>
                 <div class="footer-contact">
+                    <h5>Contact</h5>
                     <p><i class="fas fa-phone"></i> +63 917 123 4567</p>
                     <p><i class="fas fa-envelope"></i> fbo@mestizodesangley.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Sangley Point, Cavite, Philippines</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sangley Point, Cavite</p>
+                    <p><i class="fas fa-tower-broadcast"></i> Unicom: 123.45 MHz</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Mestizo de Sangley FBO. All rights reserved.</p>
+                <p>© 2024 Mestizo de Sangley FBO. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
