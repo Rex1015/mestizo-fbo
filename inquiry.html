@@ -5,170 +5,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inquiry | Mestizo de Sangley FBO</title>
     <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Navbar (same as above) -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" id="logo-img">
-                <span>Mestizo de Sangley FBO</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
-                <li><a href="services.html" class="nav-link"><span>Services</span></a></li>
-                <li><a href="inquiry.html" class="nav-link active"><span>Inquiry</span></a></li>
-                <li><a href="#form" class="nav-cta"><i class="fas fa-paper-plane"></i> Submit</a></li>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Mestizo de Sangley FBO">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="inquiry.html" class="active">Inquiry</a></li>
+                <li><a href="inquiry.html" class="nav-btn">Get Quote</a></li>
             </ul>
-            <div class="hamburger"><span></span><span></span><span></span></div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Inquiry Hero -->
-    <section class="inquiry-hero">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">INSTANT QUOTE</div>
-                <h1>Quick Inquiry Form</h1>
-                <p>Get your personalized FBO quote in under 30 minutes - 24/7 service guarantee</p>
-                <div class="process-steps">
-                    <div class="step active">
-                        <div class="step-number">1</div>
-                        <span>Fill Form</span>
+            <div class="section-label white">GET IN TOUCH</div>
+            <h1>Request a Quote</h1>
+            <p>Fill out the form below and our team will respond within 30 minutes.</p>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="section-white">
+        <div class="container">
+            <div class="form-wrapper">
+
+                <!-- LEFT: FORM -->
+                <div class="form-box">
+                    <form id="inquiryForm" action="https://formsubmit.co/fbo@mestizodesangley.com" method="POST">
+
+                        <!-- FormSubmit Config -->
+                        <input type="hidden" name="_subject" value="New FBO Inquiry - Mestizo de Sangley">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://yourdomain.com/inquiry.html">
+
+                        <h3>Flight Information</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Aircraft Type *</label>
+                                <input type="text" name="Aircraft Type" required placeholder="e.g. Cessna Citation CJ4">
+                            </div>
+                            <div class="form-group">
+                                <label>Registration *</label>
+                                <input type="text" name="Registration" required placeholder="e.g. RP-C1234">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>ETA (PH Time) *</label>
+                                <input type="datetime-local" name="ETA" required>
+                            </div>
+                            <div class="form-group">
+                                <label>ETD (PH Time)</label>
+                                <input type="datetime-local" name="ETD">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Passengers</label>
+                                <input type="number" name="Passengers" min="0" placeholder="e.g. 6">
+                            </div>
+                            <div class="form-group">
+                                <label>Crew</label>
+                                <input type="number" name="Crew" min="1" placeholder="e.g. 2">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Fuel Required</label>
+                            <input type="text" name="Fuel Required" placeholder="e.g. 2000L Jet A-1">
+                        </div>
+
+                        <h3>Services Needed</h3>
+
+                        <div class="checkbox-grid">
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="Fuel">
+                                <span class="check-box"></span>
+                                <span>Fuel Services</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="Ramp Parking">
+                                <span class="check-box"></span>
+                                <span>Ramp Parking</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="Hangar">
+                                <span class="check-box"></span>
+                                <span>Hangar Space</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="VIP Concierge">
+                                <span class="check-box"></span>
+                                <span>VIP Concierge</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="Ground Transport">
+                                <span class="check-box"></span>
+                                <span>Ground Transport</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="Catering">
+                                <span class="check-box"></span>
+                                <span>Catering</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="Maintenance">
+                                <span class="check-box"></span>
+                                <span>Maintenance</span>
+                            </label>
+                            <label class="check-item">
+                                <input type="checkbox" name="Services" value="Hotel Booking">
+                                <span class="check-box"></span>
+                                <span>Hotel Booking</span>
+                            </label>
+                        </div>
+
+                        <h3>Contact Details</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" name="Full Name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label>Company / Operator</label>
+                                <input type="text" name="Company" placeholder="Airline or operator name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" name="Email" required placeholder="email@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="Phone" placeholder="+63 917 000 0000">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Special Requests / Notes</label>
+                            <textarea name="Notes" rows="5" placeholder="Parking preferences, catering requirements, special arrangements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Send Inquiry <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- RIGHT: CONTACT INFO -->
+                <div class="contact-box">
+                    <h3>Get in Touch</h3>
+                    <p>Our FBO team is available 24/7 to assist you.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+63 917 123 4567</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <span>Quote Sent</span>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>fbo@mestizodesangley.com</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <span>Book Service</span>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Location</strong>
+                            <p>Sangley Point, Cavite City, Philippines</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-tower-broadcast"></i>
+                        </div>
+                        <div>
+                            <strong>Unicom Frequency</strong>
+                            <p>123.45 MHz</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <strong>Operations</strong>
+                            <p>24 Hours / 7 Days a Week</p>
+                        </div>
+                    </div>
+
+                    <div class="response-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>Average response time: <strong>under 30 minutes</strong></span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Inquiry Form Section -->
-    <section class="inquiry-form-section">
-        <div class="container">
-            <div class="form-container">
-                <form id="inquiryForm" class="elite-form">
-                    <div class="form-header">
-                        <h2>Aircraft Details</h2>
-                        <p>Provide your flight information for accurate quoting</p>
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label><i class="fas fa-plane"></i> Aircraft Type *</label>
-                            <input type="text" name="aircraft" required placeholder="e.g., Cessna Citation CJ4, Gulfstream G650">
-                            <span class="focus-line"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-users"></i> PAX / Crew</label>
-                            <input type="text" name="pax" placeholder="e.g., 6/3">
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-clock"></i> ETA (PH Time) *</label>
-                            <input type="datetime-local" name="eta" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label><i class="fas fa-gas-pump"></i> Fuel Required</label>
-                            <input type="text" name="fuel" placeholder="e.g., 2000L Jet A-1">
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>Services Required</h3>
-                        <div class="services-checklist">
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="services[]" value="fuel">
-                                <span class="checkmark"></span>
-                                Fuel Services
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="services[]" value="ramp">
-                                <span class="checkmark"></span>
-                                Ramp Parking
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="services[]" value="hangar">
-                                <span class="checkmark"></span>
-                                Hangar Space
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="services[]" value="transport">
-                                <span class="checkmark"></span>
-                                Ground Transport
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="services[]" value="catering">
-                                <span class="checkmark"></span>
-                                Catering
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="services[]" value="maintenance">
-                                <span class="checkmark"></span>
-                                Maintenance
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="services[]" value="vip">
-                                <span class="checkmark"></span>
-                                VIP Concierge
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>Special Requirements</h3>
-                        <div class="form-group full">
-                            <label>Additional Notes</label>
-                            <textarea name="notes" rows="5" placeholder="Parking preferences, catering requirements, special requests..."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-grid contact-grid">
-                        <div class="form-group">
-                            <label><i class="fas fa-user"></i> Contact Name *</label>
-                            <input type="text" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fas fa-at"></i> Email / Phone *</label>
-                            <input type="text" name="contact" required placeholder="email@company.com or +63917...">
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        <span>Send Inquiry</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-
-                <div id="successMessage" class="success-message">
-                    <div class="success-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3>Thank You!</h3>
-                    <p>Your inquiry has been sent successfully. Our FBO team will contact you within 30 minutes.</p>
-                    <div class="contact-emergency">
-                        <p><strong>📞 Emergency: +63 917 123 4567</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer (same as above) -->
+    <!-- FOOTER -->
     <footer class="footer">
-        <!-- Same footer content -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="footer-logo">
+                    <p>Premier Fixed Base Operator at Sangley Point, Cavite, Philippines.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Navigation</h5>
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="inquiry.html">Inquiry</a>
+                </div>
+                <div class="footer-contact">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone"></i> +63 917 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> fbo@mestizodesangley.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sangley Point, Cavite</p>
+                    <p><i class="fas fa-tower-broadcast"></i> Unicom: 123.45 MHz</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Mestizo de Sangley FBO. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
