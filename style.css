@@ -2224,29 +2224,41 @@ a {
         display: flex;
     }
 
-    .dropdown-menu {
+        .dropdown {
         position: static;
-        transform: none;
         width: 100%;
-        box-shadow: none;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-        display: none;
-        margin-top: 0.5rem;
-        padding: 0.5rem;
-        background: var(--gray-bg);
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        box-shadow: none !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 12px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: all !important;
+        display: none !important;
+        margin-top: 0.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0.5rem !important;
+        background: var(--gray-bg) !important;
+        z-index: auto !important;
     }
 
     .dropdown-menu::after,
     .dropdown-menu::before {
-        display: none;
+        display: none !important;
     }
 
     .dropdown.open .dropdown-menu {
-        display: block;
+        display: block !important;
     }
 
     .dropdown.open .dropdown-arrow {
@@ -2255,15 +2267,39 @@ a {
 
     .dropdown-toggle {
         width: 100%;
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 1rem;
+        border-radius: 12px;
     }
 
     .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
         padding: 0.7rem 0.8rem;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .dropdown-text strong {
+        font-size: 0.88rem;
+    }
+
+    .dropdown-text span {
+        font-size: 0.78rem;
     }
 
     .dropdown-footer {
         padding-left: 0.8rem;
+    }
+
+    .dropdown-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 0.9rem;
     }
 
     .stats-row {
