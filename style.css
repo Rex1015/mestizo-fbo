@@ -1703,3 +1703,730 @@ a {
         grid-template-columns: 1fr;
     }
 }
+/* ================================
+   SERVICE PAGES - SP STYLES
+================================ */
+
+/* HERO */
+.sp-hero {
+    position: relative;
+    padding: 10rem 0 6rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--dark) 0%, #1a2e1f 100%);
+    color: var(--white);
+}
+
+.fuel-hero     { background: linear-gradient(135deg, #0f172a 0%, #1a2e1f 60%, #14532d 100%); }
+.handling-hero { background: linear-gradient(135deg, #0f172a 0%, #1e2a3a 60%, #1e3a5f 100%); }
+.vip-hero      { background: linear-gradient(135deg, #0f172a 0%, #2a1a2e 60%, #4a1942 100%); }
+.ground-hero   { background: linear-gradient(135deg, #0f172a 0%, #1a2a1a 60%, #1a3a1a 100%); }
+
+.sp-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 50%, rgba(22,163,74,0.12) 0%, transparent 60%),
+                      radial-gradient(circle at 80% 20%, rgba(22,163,74,0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.sp-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.sp-hero-left {
+    flex: 1;
+    max-width: 580px;
+}
+
+.sp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+}
+
+.sp-breadcrumb a {
+    color: rgba(255,255,255,0.5);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.sp-breadcrumb a:hover {
+    color: var(--green-light);
+}
+
+.sp-breadcrumb span {
+    color: var(--green-light);
+    font-weight: 600;
+}
+
+.sp-breadcrumb i {
+    font-size: 0.65rem;
+    opacity: 0.5;
+}
+
+.sp-hero-icon {
+    width: 72px;
+    height: 72px;
+    background: rgba(22,163,74,0.2);
+    border: 1px solid rgba(22,163,74,0.3);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--green-light);
+    margin-bottom: 1.8rem;
+    backdrop-filter: blur(10px);
+}
+
+.sp-hero-left h1 {
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 1.2rem;
+    color: var(--white);
+}
+
+.sp-hero-left p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 480px;
+}
+
+.sp-hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+}
+
+.sp-hero-badges span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(22,163,74,0.15);
+    border: 1px solid rgba(22,163,74,0.3);
+    color: rgba(255,255,255,0.9);
+    padding: 0.45rem 1rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.sp-hero-badges span i {
+    color: var(--green-light);
+    font-size: 0.75rem;
+}
+
+.sp-hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-outline-dark {
+    display: inline-block;
+    background: transparent;
+    color: rgba(255,255,255,0.85);
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid rgba(255,255,255,0.25);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-outline-dark:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-2px);
+}
+
+/* HERO RIGHT CARD */
+.sp-hero-right {
+    flex-shrink: 0;
+}
+
+.sp-hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 28px;
+    padding: 2.5rem;
+    backdrop-filter: blur(20px);
+    width: 320px;
+}
+
+.sp-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.sp-stat {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: var(--transition);
+}
+
+.sp-stat:hover {
+    background: rgba(22,163,74,0.15);
+    border-color: rgba(22,163,74,0.3);
+    transform: translateY(-4px);
+}
+
+.sp-stat i {
+    font-size: 1.6rem;
+    color: var(--green-light);
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.sp-stat h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.2rem;
+}
+
+.sp-stat p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+}
+
+/* SECTION STYLES */
+.sp-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.sp-section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 4rem;
+}
+
+.sp-section-header .section-sub {
+    margin-bottom: 0;
+}
+
+/* SP CARDS GRID */
+.sp-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.sp-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.sp-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--green-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.sp-card:hover::after {
+    transform: scaleX(1);
+}
+
+.sp-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 60px rgba(22,163,74,0.12);
+    border-color: var(--green-border);
+}
+
+.sp-card-top {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.sp-card-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: var(--green-pale);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--green);
+    transition: var(--transition);
+}
+
+.sp-card:hover .sp-card-icon {
+    background: var(--green);
+    color: var(--white);
+    transform: rotate(5deg) scale(1.05);
+}
+
+.sp-card-top h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.sp-card > p {
+    font-size: 0.93rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+/* SP LIST */
+.sp-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.sp-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.88rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.sp-list li i {
+    color: var(--green);
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    background: var(--green-pale);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================================
+   PROCESS SECTION
+================================ */
+.sp-process {
+    padding: 6rem 0;
+    background: var(--gray-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.sp-process::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(22,163,74,0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.sp-process-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.sp-step {
+    flex: 1;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+}
+
+.sp-step:hover {
+    border-color: var(--green);
+    box-shadow: 0 12px 40px rgba(22,163,74,0.1);
+    transform: translateY(-6px);
+}
+
+.sp-step:hover .sp-step-num {
+    background: var(--green);
+    color: var(--white);
+    border-color: var(--green);
+}
+
+.sp-step-num {
+    width: 56px;
+    height: 56px;
+    background: var(--green-pale);
+    border: 2px solid var(--green-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--green);
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.sp-step-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.6rem;
+}
+
+.sp-step-content p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.sp-step-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    color: var(--green);
+    font-size: 1rem;
+    opacity: 0.4;
+    flex-shrink: 0;
+    margin-top: 2.5rem;
+}
+
+/* ================================
+   TAGS + INLINE CTA SECTION
+================================ */
+.sp-tags-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.sp-tags-inner {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sp-tags-inner h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.service-tags.large span {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+}
+
+.sp-inline-cta {
+    background: var(--dark);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    color: var(--white);
+}
+
+.sp-inline-cta h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+}
+
+.sp-inline-cta p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1.8rem;
+    line-height: 1.7;
+}
+
+.sp-inline-cta .btn-green {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.sp-contact-quick {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.sp-contact-quick a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.sp-contact-quick a:hover {
+    color: var(--green-light);
+}
+
+.sp-contact-quick i {
+    color: var(--green-light);
+    width: 16px;
+    font-size: 0.85rem;
+}
+
+/* ================================
+   OTHER SERVICES SECTION
+================================ */
+.sp-other-services {
+    padding: 6rem 0;
+    background: var(--gray-bg);
+}
+
+.sp-other-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.sp-other-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.sp-other-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--green), var(--green-light));
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: var(--transition);
+}
+
+.sp-other-card:hover::before {
+    transform: scaleY(1);
+}
+
+.sp-other-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(22,163,74,0.12);
+    border-color: var(--green-border);
+}
+
+.sp-other-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--green-pale);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--green);
+    margin-bottom: 0.8rem;
+    transition: var(--transition);
+}
+
+.sp-other-card:hover .sp-other-icon {
+    background: var(--green);
+    color: var(--white);
+}
+
+.sp-other-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.sp-other-card p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    flex: 1;
+}
+
+.sp-other-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--green);
+    margin-top: 0.8rem;
+    transition: var(--transition);
+}
+
+.sp-other-card:hover .sp-other-link {
+    gap: 0.8rem;
+}
+
+.sp-other-link i {
+    font-size: 0.75rem;
+    transition: var(--transition);
+}
+
+/* ================================
+   RESPONSIVE - SERVICE PAGES
+================================ */
+@media (max-width: 1024px) {
+    .sp-tags-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .sp-other-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .sp-hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .sp-hero-left {
+        max-width: 100%;
+    }
+
+    .sp-hero-left p {
+        max-width: 100%;
+    }
+
+    .sp-hero-badges {
+        justify-content: center;
+    }
+
+    .sp-hero-btns {
+        justify-content: center;
+    }
+
+    .sp-breadcrumb {
+        justify-content: center;
+    }
+
+    .sp-hero-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .sp-process-steps {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sp-step-arrow {
+        transform: rotate(90deg);
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .sp-hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .sp-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-other-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-section,
+    .sp-process,
+    .sp-tags-section,
+    .sp-other-services {
+        padding: 4rem 0;
+    }
+
+    .sp-stat-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.8rem;
+    }
+
+    .sp-stat {
+        padding: 1rem 0.5rem;
+    }
+
+    .sp-stat i {
+        font-size: 1.2rem;
+    }
+
+    .sp-stat h4 {
+        font-size: 0.8rem;
+    }
+
+    .sp-stat p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sp-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sp-hero-card {
+        padding: 1.5rem;
+    }
+
+    .sp-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .sp-inline-cta {
+        padding: 2rem 1.5rem;
+    }
+}
