@@ -53,19 +53,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // MOBILE DROPDOWN TOGGLE
     // ================================
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
+                e.stopPropagation();
+
                 const parent = toggle.closest('.dropdown');
                 const isOpen = parent.classList.contains('open');
 
-                // Close all dropdowns
-                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+                // Close all other dropdowns first
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    if (d !== parent) d.classList.remove('open');
+                });
 
-                if (!isOpen) {
+                // Toggle current
+                if (isOpen) {
+                    parent.classList.remove('open');
+                } else {
                     parent.classList.add('open');
                 }
+            }
+        });
+    });
+
+    // Close dropdown when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('open');
+                });
+            }
+        }
+    });
+
+    // Close mobile menu when a dropdown item is clicked
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navLinks.classList.remove('open');
+                burger.classList.remove('active');
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('open');
+                });
             }
         });
     });
