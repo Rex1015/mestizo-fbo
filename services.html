@@ -18,7 +18,44 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropdown-toggle active">
+                        Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="fuel-services.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-gas-pump"></i></div>
+                            <div class="dropdown-text">
+                                <strong>Fuel Services</strong>
+                                <span>Jet A-1 & AVGAS 100LL</span>
+                            </div>
+                        </a>
+                        <a href="aircraft-handling.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-plane"></i></div>
+                            <div class="dropdown-text">
+                                <strong>Aircraft Handling</strong>
+                                <span>Ramp, hangar & ground ops</span>
+                            </div>
+                        </a>
+                        <a href="vip-concierge.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="dropdown-text">
+                                <strong>VIP Concierge</strong>
+                                <span>Meet & greet, immigration</span>
+                            </div>
+                        </a>
+                        <a href="ground-handling.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-car-side"></i></div>
+                            <div class="dropdown-text">
+                                <strong>Ground Handling</strong>
+                                <span>Transport & crew services</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-footer">
+                            <a href="services.html">View All Services →</a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="inquiry.html">Inquiry</a></li>
                 <li><a href="inquiry.html" class="nav-btn">Get Quote</a></li>
             </ul>
@@ -30,33 +67,27 @@
         </div>
     </nav>
 
-   <!-- PAGE HERO -->
-<section class="page-hero">
-    <div class="container">
-        <div class="page-hero-inner">
-
-            <!-- LEFT: DESCRIPTION -->
-            <div class="page-hero-left">
-                <div class="section-label white">OUR SERVICES</div>
-                <h1>Aviation Services<br>Built for the<br>Philippines</h1>
-                <p>CAAP certified · 24/7 operations · Sangley Point, Cavite. Comprehensive FBO solutions tailored for local and international aviation operations.</p>
-            </div>
-
-            <!-- RIGHT: LOGO -->
-            <div class="page-hero-right">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-inner">
+                <div class="page-hero-left">
+                    <div class="section-label white">OUR SERVICES</div>
+                    <h1>Aviation Services<br>Built for the<br>Philippines</h1>
+                    <p>CAAP certified · 24/7 operations · Sangley Point, Cavite. Comprehensive FBO solutions tailored for local and international aviation operations.</p>
+                </div>
+                <div class="page-hero-right">
                 <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="page-hero-logo">
+                </div>
             </div>
-
         </div>
-    </div>
-</section>
-    
+    </section>
+
     <!-- SERVICES DETAILED -->
-    <section class="section-white">
+    <section class="section-white logo-bg">
         <div class="container">
             <div class="services-list">
 
-                <!-- FUEL -->
                 <div class="service-row">
                     <div class="service-row-icon">
                         <i class="fas fa-gas-pump"></i>
@@ -75,7 +106,6 @@
                     <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- HANDLING -->
                 <div class="service-row">
                     <div class="service-row-icon">
                         <i class="fas fa-plane"></i>
@@ -94,7 +124,6 @@
                     <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- VIP -->
                 <div class="service-row">
                     <div class="service-row-icon">
                         <i class="fas fa-user-tie"></i>
@@ -113,13 +142,12 @@
                     <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- GROUND -->
                 <div class="service-row">
                     <div class="service-row-icon">
                         <i class="fas fa-car-side"></i>
                     </div>
                     <div class="service-row-content">
-                        <h3>Ground Services</h3>
+                        <h3>Ground Handling</h3>
                         <p>Crew cars, VIP transfers to Manila, catering coordination, local tours, and laundry services. Everything your crew needs on the ground.</p>
                         <div class="service-tags">
                             <span>Crew Cars</span>
@@ -132,7 +160,6 @@
                     <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- MAINTENANCE -->
                 <div class="service-row">
                     <div class="service-row-icon">
                         <i class="fas fa-tools"></i>
@@ -141,7 +168,7 @@
                         <h3>Maintenance</h3>
                         <p>CAAP-certified technicians available for AOG support, line maintenance, pre-flight inspections, and parts procurement across the Philippines.</p>
                         <div class="service-tags">
-                                                        <span>AOG Support</span>
+                            <span>AOG Support</span>
                             <span>Line Maintenance</span>
                             <span>CAAP Certified</span>
                             <span>Parts Procurement</span>
@@ -151,7 +178,6 @@
                     <a href="inquiry.html" class="btn-green small">Inquire</a>
                 </div>
 
-                <!-- SUPPORT -->
                 <div class="service-row">
                     <div class="service-row-icon">
                         <i class="fas fa-headset"></i>
