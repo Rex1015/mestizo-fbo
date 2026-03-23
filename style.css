@@ -1275,3 +1275,204 @@ a {
     }
 }
 
+/* ================================
+   DROPDOWN MENU
+================================ */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    width: 320px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05);
+    padding: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* Arrow pointer on dropdown */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: var(--white);
+    border-radius: 2px;
+    box-shadow: -2px -2px 5px rgba(0,0,0,0.04);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: all;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--text);
+}
+
+.dropdown-item:hover {
+    background: var(--green-pale);
+}
+
+.dropdown-item:hover .dropdown-icon {
+    background: var(--green);
+    color: var(--white);
+}
+
+.dropdown-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: var(--green-pale);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--green);
+    transition: var(--transition);
+}
+
+.dropdown-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.dropdown-text strong {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.3;
+}
+
+.dropdown-text span {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.dropdown-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 0.5rem;
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+.dropdown-footer a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--green);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.dropdown-footer a:hover {
+    color: #15803d;
+    letter-spacing: 0.3px;
+}
+
+/* ================================
+   LOGO BACKGROUND WATERMARK
+================================ */
+.logo-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-bg::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-image: url('assets/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.logo-bg .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Apply logo-bg to section-gray too */
+.section-gray.logo-bg::before {
+    opacity: 0.035;
+}
+
+/* ================================
+   MOBILE DROPDOWN
+================================ */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        display: none;
+        margin-top: 0.5rem;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+}
+
