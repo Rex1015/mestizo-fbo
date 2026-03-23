@@ -18,7 +18,47 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
+
+                <!-- SERVICES DROPDOWN -->
+                <li class="dropdown">
+                    <a href="services.html" class="dropdown-toggle">
+                        Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="fuel-services.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-gas-pump"></i></div>
+                            <div class="dropdown-text">
+                                <strong>Fuel Services</strong>
+                                <span>Jet A-1 & AVGAS 100LL</span>
+                            </div>
+                        </a>
+                        <a href="aircraft-handling.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-plane"></i></div>
+                            <div class="dropdown-text">
+                                <strong>Aircraft Handling</strong>
+                                <span>Ramp, hangar & ground ops</span>
+                            </div>
+                        </a>
+                        <a href="vip-concierge.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="dropdown-text">
+                                <strong>VIP Concierge</strong>
+                                <span>Meet & greet, immigration</span>
+                            </div>
+                        </a>
+                        <a href="ground-handling.html" class="dropdown-item">
+                            <div class="dropdown-icon"><i class="fas fa-car-side"></i></div>
+                            <div class="dropdown-text">
+                                <strong>Ground Handling</strong>
+                                <span>Transport & crew services</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-footer">
+                            <a href="services.html">View All Services →</a>
+                        </div>
+                    </div>
+                </li>
+
                 <li><a href="inquiry.html">Inquiry</a></li>
                 <li><a href="inquiry.html" class="nav-btn">Get Quote</a></li>
             </ul>
@@ -31,34 +71,29 @@
     </nav>
 
     <!-- HERO -->
-<section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="assets/hero-bg.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-
-        <!-- LEFT: DESCRIPTION -->
-        <div class="hero-left">
-            <p class="hero-tag">SANGLEY POINT · CAVITE · PHILIPPINES</p>
-            <h1>Premier Fixed<br>Base Operator<br>in the Philippines</h1>
-            <p class="hero-sub">24/7 elite aviation services at Sangley Point — fueling, handling, VIP concierge, and more. CAAP certified and built for Philippine operations.</p>
-            <div class="hero-btns">
-                <a href="inquiry.html" class="btn-green">Get a Quote</a>
-                <a href="services.html" class="btn-outline">Our Services</a>
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <p class="hero-tag">SANGLEY POINT · CAVITE · PHILIPPINES</p>
+                <h1>Premier Fixed<br>Base Operator<br>in the Philippines</h1>
+                <p class="hero-sub">24/7 elite aviation services at Sangley Point — fueling, handling, VIP concierge, and more. CAAP certified and built for Philippine operations.</p>
+                <div class="hero-btns">
+                    <a href="inquiry.html" class="btn-green">Get a Quote</a>
+                    <a href="services.html" class="btn-outline">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="hero-logo">
             </div>
         </div>
-
-        <!-- RIGHT: LOGO -->
-        <div class="hero-right">
-            <img src="assets/logo.png" alt="Mestizo de Sangley FBO" class="hero-logo">
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
         </div>
-
-    </div>
-    <div class="hero-scroll">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
+    </section>
 
     <!-- STATS -->
     <section class="stats-section">
@@ -85,7 +120,7 @@
     </section>
 
     <!-- SERVICES PREVIEW -->
-    <section class="section-white">
+    <section class="section-white logo-bg">
         <div class="container">
             <div class="section-label">WHAT WE OFFER</div>
             <h2 class="section-title">Elite Aviation Services</h2>
@@ -141,7 +176,7 @@
     </section>
 
     <!-- WHY US -->
-    <section class="section-gray">
+    <section class="section-gray logo-bg">
         <div class="container">
             <div class="section-label">WHY CHOOSE US</div>
             <h2 class="section-title">The Mestizo Difference</h2>
