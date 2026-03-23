@@ -2428,3 +2428,57 @@ a {
         padding: 2rem 1.5rem;
     }
 }
+
+/* ================================
+   SERVICE ROW LINKS (services.html)
+================================ */
+.service-row-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-row-link .service-row {
+    cursor: pointer;
+    position: relative;
+}
+
+.service-row-link:hover .service-row {
+    border-color: var(--green);
+    box-shadow: 0 12px 40px rgba(22,163,74,0.12);
+    transform: translateX(8px);
+    background: #fafffe;
+}
+
+.service-row-link:hover .service-row-icon {
+    background: var(--green);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.service-row-arrow {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: var(--green-pale);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.service-row-link:hover .service-row-arrow {
+    background: var(--green);
+    color: var(--white);
+    transform: translateX(4px);
+}
+
+/* Remove old btn-green small from service rows
+   since we now use arrow instead */
+.service-row-link .btn-green.small {
+    display: none;
+}
