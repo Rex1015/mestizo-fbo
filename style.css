@@ -1298,28 +1298,48 @@ a {
     transform: rotate(180deg);
 }
 
+/* KEY FIX: padding-top bridges the gap between
+   the nav link and the dropdown so mouse
+   doesn't leave the hover zone */
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 16px);
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(-8px);
+    transform: translateX(-50%) translateY(0);
     width: 320px;
     background: var(--white);
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05);
     padding: 0.8rem;
+    padding-top: 1.5rem;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
     z-index: 1000;
     pointer-events: none;
+
+    /* This moves it up so it overlaps slightly
+       with the nav item — no gap at all */
+    margin-top: -8px;
+}
+
+/* Invisible bridge fills the gap between
+   nav link and dropdown menu */
+.dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    background: transparent;
 }
 
 /* Arrow pointer on dropdown */
 .dropdown-menu::before {
     content: '';
     position: absolute;
-    top: -6px;
+    top: 6px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     width: 12px;
@@ -1327,13 +1347,14 @@ a {
     background: var(--white);
     border-radius: 2px;
     box-shadow: -2px -2px 5px rgba(0,0,0,0.04);
+    z-index: -1;
 }
 
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
     pointer-events: all;
+    transform: translateX(-50%) translateY(0);
 }
 
 .dropdown-item {
@@ -1410,6 +1431,41 @@ a {
     letter-spacing: 0.3px;
 }
 
+/* ================================
+   MOBILE DROPDOWN
+================================ */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        display: none;
+        margin-top: 0.5rem;
+        padding-top: 0.8rem;
+    }
+
+    .dropdown-menu::after {
+        display: none;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+}
 /* ================================
    LOGO BACKGROUND WATERMARK
 ================================ */
