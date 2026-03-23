@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             burger.classList.toggle('active');
         });
 
-        // Close on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-links > li > a:not(.dropdown-toggle)').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
                 burger.classList.remove('active');
@@ -51,10 +50,38 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
 
     // ================================
+    // MOBILE DROPDOWN TOGGLE
+    // ================================
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const parent = toggle.closest('.dropdown');
+                const isOpen = parent.classList.contains('open');
+
+                // Close all dropdowns
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+
+                if (!isOpen) {
+                    parent.classList.add('open');
+                }
+            }
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+        }
+    });
+
+    // ================================
     // SCROLL REVEAL
     // ================================
     const revealElements = document.querySelectorAll(
-                '.card, .why-item, .service-row, .stat-box, .contact-item'
+        '.card, .why-item, .service-row, .stat-box, .contact-item'
     );
 
     const revealObserver = new IntersectionObserver((entries) => {
@@ -102,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ================================
     const form = document.getElementById('inquiryForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', () => {
             const btn = form.querySelector('.submit-btn');
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             btn.disabled = true;
@@ -150,29 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
 
     statBoxes.forEach(el => countObserver.observe(el));
-
-    // ================================
-    // ACTIVE NAV ON SCROLL (index only)
-    // ================================
-    const sections = document.querySelectorAll('section[id]');
-    if (sections.length > 0) {
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    }
 
     // ================================
     // SMOOTH HOVER ON SERVICE ROWS
