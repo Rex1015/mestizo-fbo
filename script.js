@@ -170,6 +170,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ================================
+    // FORCE VIDEO AUTOPLAY
+    // ================================
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.muted = true;
+        heroVideo.playsInline = true;
+
+        const playPromise = heroVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                // Autoplay blocked — try again on first interaction
+                document.addEventListener('click', () => {
+                    heroVideo.play();
+                }, { once: true });
+
+                document.addEventListener('touchstart', () => {
+                    heroVideo.play();
+                }, { once: true });
+            });
+        }
+
+        // Reload video if it stalls
+        heroVideo.addEventListener('stalled', () => {
+            heroVideo.load();
+            heroVideo.play();
+        });
+
+        heroVideo.addEventListener('suspend', () => {
+            heroVideo.play();
+        });
+    }
+
+    // ================================
     // STATS COUNTER ANIMATION
     // ================================
     const statBoxes = document.querySelectorAll('.stat-box h3');
