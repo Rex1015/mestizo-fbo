@@ -2769,3 +2769,173 @@ a {
         gap: 1.5rem;
     }
 }
+
+/* ================================
+   VIDEO HERO FIX
+================================ */
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Fallback background if video fails */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1a2e1f 60%, #14532d 100%);
+}
+
+/* ================================
+   PAGE HERO BACKGROUND IMAGES
+================================ */
+
+/* Overlay for all page heroes with bg images */
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(15,23,42,0.82) 0%,
+        rgba(15,23,42,0.65) 50%,
+        rgba(22,163,74,0.35) 100%
+    );
+    z-index: 1;
+}
+
+/* Make page-hero relative for overlay */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content sits above overlay */
+.page-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Services page background */
+.services-bg {
+    background-image: url('assets/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Inquiry page background */
+.inquiry-bg {
+    background-image: url('assets/inquiry-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================================
+   SP HERO BACKGROUND IMAGES
+================================ */
+
+/* Overlay for sp heroes */
+.sp-hero-img-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Each sp-hero content sits above overlays */
+.sp-hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.sp-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(22,163,74,0.12) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(22,163,74,0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Fuel Services background */
+.fuel-hero {
+    background-image: url('assets/fuel-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fuel-hero .sp-hero-img-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(15,23,42,0.88) 0%,
+        rgba(20,83,45,0.75) 100%
+    );
+}
+
+/* Aircraft Handling background */
+.handling-hero {
+    background-image: url('assets/handling-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.handling-hero .sp-hero-img-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(15,23,42,0.88) 0%,
+        rgba(30,58,95,0.75) 100%
+    );
+}
+
+/* VIP Concierge background */
+.vip-hero {
+    background-image: url('assets/vip-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.vip-hero .sp-hero-img-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(15,23,42,0.88) 0%,
+        rgba(74,25,66,0.75) 100%
+    );
+}
+
+/* Ground Handling background */
+.ground-hero {
+    background-image: url('assets/ground-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ground-hero .sp-hero-img-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(15,23,42,0.88) 0%,
+        rgba(26,58,26,0.75) 100%
+    );
+}
+
+/* ================================
+   BACKGROUND PARALLAX EFFECT
+================================ */
+@media (min-width: 769px) {
+    .services-bg,
+    .inquiry-bg,
+    .fuel-hero,
+    .handling-hero,
+    .vip-hero,
+    .ground-hero {
+        background-attachment: fixed;
+    }
+}
